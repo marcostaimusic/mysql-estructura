@@ -1,0 +1,3 @@
+SELECT SUM(u.ull_preu), c.client_id, c.client_name FROM s2_n1_ex1.ulleres u RIGHT JOIN s2_n1_ex1.client c ON u.client_id = c.client_id WHERE YEAR(u.ulleres_sale_date) = 2020 AND c.client_id = 1; 
+SELECT * FROM s2_n1_ex1.ulleres u JOIN s2_n1_ex1.seller s ON u.seller_id = s.seller_id WHERE s.seller_id = 3;
+SELECT DISTINCT p.prov_name FROM s2_n1_ex1.proveidors p JOIN s2_n1_ex1.marca m ON p.proveidors_id = m.proveidors_id JOIN s2_n1_ex1.ulleres u ON u.marca_id = m.marca_id WHERE u.ulleres_sale_date IS NOT NULL;
