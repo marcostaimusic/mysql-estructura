@@ -52,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `S2_N1_ex1`.`client` (
   `client_email` VARCHAR(255) NULL,
   `client_registration` DATETIME NULL DEFAULT CURRENT_TIMESTAMP,
   `client_referred_by` INT NOT NULL,
-  PRIMARY KEY (`client_id`, `client_referred_by`),
+  PRIMARY KEY (`client_id`),
   INDEX `fk_client_client1_idx` (`client_referred_by` ASC) VISIBLE,
   CONSTRAINT `fk_client_client1`
     FOREIGN KEY (`client_referred_by`)
